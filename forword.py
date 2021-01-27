@@ -22,7 +22,7 @@ def runCmd(cmd):
     cmd = cmd.replace(" ","${IFS}")
     token = generateToken(cmd)
     headers = { "Authorization" : "Bearer {}".format(token) }
-    r = requests.get('http://10.10.1.1:3000/', headers=headers)  //ip and port
+    r = requests.get('http://10.10.1.1/', headers=headers)  //ip and port
     return r.text.strip()
 
 def writeCmd(cmd):
